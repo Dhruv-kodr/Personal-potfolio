@@ -2068,7 +2068,10 @@
               <a class="button button-primary" href="#projects"
                 >Explore my work ↘</a
               ><a class="button" href="#contact">Let's connect ↗</a
-              ><a class="button button-quiet" href="#" id="resume"
+              ><a class="button button-quiet" 
+                href="https://drive.google.com/uc?export=download&id=1fzkstWDfr8ULtc_K2nqumvyN3LzQmdaH" 
+                id="resume"
+                download
                 >Download resume ↓</a
               >
             </div>
@@ -2799,17 +2802,7 @@
           { passive: true },
         );
         /* resume (editable text file) */
-        $("#resume").onclick = (e) => {
-          e.preventDefault();
-          const t =
-            "DHRUV SAINI\nFull-Stack Developer | SaaS Engineer | AI Automation Developer\nEmail: dhruvhts@gmail.com | Phone: +91 8941902476\nGitHub: https://github.com/Dhruv-kodr\n\nExperience: Full-Stack Developer (Laravel), WebGrid Solution, 6 months\n\nSkills: HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB, MySQL, Laravel, PHP, Python, Django, n8n, RAG, Vector DB\n\nProjects:\n" +
-            P.map((p) => p[0] + " - " + p[5]).join("\n");
-          const a = document.createElement("a");
-          a.href = URL.createObjectURL(new Blob([t], { type: "text/plain" }));
-          a.download = "Dhruv-Saini-Resume.txt";
-          a.click();
-          setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-        };
+        
         /* ---- form ---- */
         const f = $("#cf"),
           fs = $("#fs"),
